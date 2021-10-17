@@ -17,21 +17,23 @@ import org.openqa.selenium.support.ui.Select;
 public class BaseClass1 {
 	public static WebDriver driver;
 
-	public static WebDriver browserLaunch(String Browser) {
+		public static WebDriver browserLaunch(String Browser) {
 		if (Browser.equalsIgnoreCase("Chrome")) {
-			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\suriyamz\\eclipse-workspace\\AdactinCucumber.org\\driver2\\chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver",
+					//"C:\\Users\\suriyamz\\eclipse-workspace\\AdactinCucumber.org\\driver2\\chromedriver.exe");
+			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
 		} else if (Browser.equalsIgnoreCase("Msedge")) {
-			System.setProperty("webdriver.edge.driver",
-					"C:\\Users\\suriyamz\\eclipse-workspace\\JavaSelenium\\Driver\\msedgedriver.exe");
-			driver = new EdgeDriver();
+//			System.setProperty("webdriver.edge.driver",
+//					"C:\\Users\\suriyamz\\eclipse-workspace\\JavaSelenium\\Driver\\msedgedriver.exe");
+            WebDriverManager.edgedriver().setup();
+				driver = new EdgeDriver();
 		} else {
 			System.out.println("Invalid browser name");
 		}
 		return driver;
 	}
-
+		
 	public static void launchWebsite(String y) {
 		driver.get(y);
 	}
