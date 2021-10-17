@@ -16,4 +16,5 @@ Framework - Cucumber
 **Instructions**
 You can simply import the repositary to Eclipse tool and Execute the Runner class, The Automation will start in the browser.
 
-
+**Note**
+Please find the Manual test cases for Google search page file in Excel format attached with this repositary.
