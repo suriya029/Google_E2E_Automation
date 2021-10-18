@@ -6,6 +6,8 @@ Tool - Selenium WebDriver,Maven
 Framework - Cucumber
 
 **Description:**
+*  You can find the Base and POM Classes present inside 'src' folder under 'main/java/com'
+*  Featrure file, Runner class and Stepdefinition class can be found under 'test/java/com'
 *  Base class contains implemented methods
 *  Have created individual POM Classes for each scenarios
 *  Have created test scenarios in feature file using Gherkins language and imported the snippets into Stepdefinition class
